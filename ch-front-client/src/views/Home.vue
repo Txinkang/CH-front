@@ -116,7 +116,7 @@ const fetchNews = async () => {
     const params = {
       new_title: '',
       page_num: 1,
-      page_size: 4
+      page_size: 40
     }
     console.log("获取资讯请求数据:", params);
     const response = await newsApi.getNews(params)
@@ -145,7 +145,7 @@ const fetchProjects = async () => {
     const params = {
       project_title: '',
       page_num: 1,
-      page_size: 4
+      page_size: 40
     }
     console.log("获取非遗文化请求参数:", params);
     const response = await cultureApi.getProject(params)
