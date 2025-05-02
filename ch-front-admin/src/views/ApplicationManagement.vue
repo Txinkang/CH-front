@@ -139,6 +139,7 @@
   import { applicationApi } from '../api/application'
   import { errorHandler } from '../utils/errorHandler.js'
   import { Search } from '@element-plus/icons-vue'
+  import ConstData from '../constant/ConstData'
   
   // 分页相关
   const currentPage = ref(1)
@@ -200,12 +201,12 @@
   
   // 获取图片URL
   const getImageUrl = (image) => {
-    return `http://localhost:8080/images/heritagePictures/${image}`
+    return `${ConstData.heritagePicturePath}${image}`
   }
   
   // 获取材料URL
   const getMaterialUrl = (material) => {
-    return `http://localhost:8080/images/heritageMaterial/${material}`
+    return `${ConstData.heritageMaterialPath}${material}`
   }
   
   // 状态相关

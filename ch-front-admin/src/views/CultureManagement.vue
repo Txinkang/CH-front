@@ -180,7 +180,7 @@
   import { ElMessage, ElMessageBox } from 'element-plus'
   import { cultureApi } from '../api/culture'
   import { errorHandler } from '../utils/errorHandler.js'
-  
+  import ConstData from '../constant/ConstData'
   // 搜索相关
   const searchKeyword = ref('')
   const handleSearch = () => {
@@ -249,13 +249,13 @@
   
   // 获取图片URL
   const getImageUrl = (image) => {
-    return `http://localhost:8080/images/heritagePictures/${image}`
+    return `${ConstData.heritagePicturePath}${image}`
   }
   
   // 获取材料URL
   const getMaterialUrl = (material) => {
     console.log(material)
-    return `http://localhost:8080/images/heritageMaterial/${material}`
+    return `${ConstData.heritageMaterialPath}${material}`
   }
   
   // 状态相关

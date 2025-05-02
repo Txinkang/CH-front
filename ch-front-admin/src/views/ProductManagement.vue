@@ -212,7 +212,7 @@ import { Search, Edit, Delete, Plus, ChatDotRound } from '@element-plus/icons-vu
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { productApi } from '../api/product'
 import { errorHandler } from '../utils/errorHandler.js'
-
+import ConstData from '../constant/ConstData'
 // 搜索相关
 const searchKeyword = ref('')
 const handleSearch = () => {
@@ -283,7 +283,7 @@ const formatDate = (dateString) => {
 
 // 获取图片URL
 const getImageUrl = (image) => {
-  return `http://localhost:8080/images/productPictures/${image}`
+  return `${ConstData.productPicturePath}${image}`
 }
 
 // 切换描述显示

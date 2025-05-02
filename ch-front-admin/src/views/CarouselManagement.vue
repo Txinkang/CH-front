@@ -112,7 +112,7 @@ import { Search, Edit, Delete, Plus } from '@element-plus/icons-vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { bannerApi } from '../api/banner'
 import { errorHandler } from '../utils/errorHandler.js'
-
+import ConstData from '../constant/ConstData'
 // 搜索相关
 const searchKeyword = ref('')
 const handleSearch = () => {
@@ -160,7 +160,7 @@ const fetchBanners = async () => {
 
 // 图片处理
 const getImageUrl = (image) => {
-  return `http://localhost:8080/images/bannerPictures/${image}`
+  return `${ConstData.bannerPicturePath}${image}`
 }
 
 const imageUrl = ref('')
