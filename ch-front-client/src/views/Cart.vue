@@ -83,7 +83,7 @@ import { ElMessage, ElMessageBox } from 'element-plus'
 import { cartApi } from '../api/cart'
 import { productApi } from '../api/product'
 import { errorHandler } from '../utils/errorHandler'
-
+import ConstData from '../constant/ConstData'
 // 数据定义
 const cartItems = ref([])
 
@@ -132,7 +132,7 @@ const getProductImages = (imageString) => {
 }
 
 const getImageUrl = (image) => {
-  return `http://localhost:8080/images/productPictures/${image}`
+  return `${ConstData.productPicturePath}${image}`
 }
 
 const calculateTotal = () => {

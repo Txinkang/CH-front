@@ -138,7 +138,7 @@ import { Search } from '@element-plus/icons-vue'
 import { ElMessage } from 'element-plus'
 import { productApi } from '../api/product'
 import { errorHandler } from '../utils/errorHandler'
-
+import ConstData from '../constant/ConstData'
 // 数据定义
 const products = ref([])
 const currentPage = ref(1)
@@ -216,7 +216,7 @@ const getProductImages = (imageString) => {
 }
 
 const getImageUrl = (image) => {
-  return `http://localhost:8080/images/productPictures/${image}`
+  return `${ConstData.productPicturePath}${image}`
 }
 
 const formatDate = (dateString) => {

@@ -415,8 +415,8 @@ const fetchUserInfo = async () => {
 }
 
 const showEditDialog = () => {
-  editForm.user_account = userInfo.value.userAccount
-  editForm.user_password = ''
+  editForm.userAccount = userInfo.value.userAccount
+  editForm.userPassword = ''
   editDialog.visible = true
 }
 

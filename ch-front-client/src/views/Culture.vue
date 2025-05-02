@@ -144,7 +144,7 @@ import { Search, Plus } from '@element-plus/icons-vue'
 import { ElMessage } from 'element-plus'
 import { cultureApi } from '../api/culture'
 import { errorHandler } from '../utils/errorHandler'
-
+import ConstData from '../constant/ConstData'
 // 数据定义
 const activeTab = ref('list')
 const projects = ref([])
@@ -196,7 +196,7 @@ const getProjectImages = (imageString) => {
 }
 
 const getImageUrl = (image) => {
-  return `http://localhost:8080/images/heritagePictures/${image}`
+  return `${ConstData.heritagePicturePath}${image}`
 }
 
 const formatDate = (dateString) => {
